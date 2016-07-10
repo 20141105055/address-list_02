@@ -103,12 +103,6 @@
                                     <navigationItem title="通讯录（删除联系人）" id="UGY-jm-8Ho"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="WCK-W7-BM6">
-                                <rect key="frame" x="68" y="192" width="185" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hk0-d9-G3S">
                                 <rect key="frame" x="186" y="289" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -129,6 +123,12 @@
                                     <action selector="delet:" destination="zbn-Yz-8t5" eventType="touchUpInside" id="ljg-3z-eZR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入您要删除的姓名或电话号码" textAlignment="natural" minimumFontSize="17" id="WCK-W7-BM6">
+                                <rect key="frame" x="50" y="164" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75230473109999996" green="1" blue="0.77910113049999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Veh-wy-dqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="155"/>
+            <point key="canvasLocation" x="1273" y="155"/>
         </scene>
         <!--Find-->
         <scene sceneID="iZX-8U-sIA">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TO4-pp-qkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="155"/>
+            <point key="canvasLocation" x="1253" y="867"/>
         </scene>
         <!--Findwhat-->
         <scene sceneID="2dC-wW-htZ">
@@ -235,7 +235,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="pNh-9X-i2b">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入您要查找的姓名或电话号码" textAlignment="natural" minimumFontSize="17" id="pNh-9X-i2b">
                                 <rect key="frame" x="41" y="76" width="221" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -251,6 +251,16 @@
                                     <action selector="findname:" destination="U9O-hH-KhM" eventType="touchUpInside" id="NSW-Kr-6OF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r6Z-FU-yoj">
+                                <rect key="frame" x="13" y="370" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="按电话号码查找">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findphone:" destination="U9O-hH-KhM" eventType="touchUpInside" id="3xa-VJ-fpU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75230473107905782" green="1" blue="0.77910113052922292" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -261,7 +271,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDL-9o-5Le" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968" y="155"/>
+            <point key="canvasLocation" x="849" y="867"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dw5-oU-3pO">
+            <objects>
+                <viewController id="Iu6-jE-Wn8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lx7-Jx-fJc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="Dtn-4T-Acg">
+                                <rect key="frame" x="0.0" y="29" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="C6o-NH-2dU"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSK-NA-cub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="145"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9To-KH-gEG">
@@ -352,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ng-oF-xio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533" y="155"/>
+            <point key="canvasLocation" x="531" y="155"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

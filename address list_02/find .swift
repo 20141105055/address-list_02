@@ -34,7 +34,7 @@ class find: UIViewController {
     }
     
     @IBAction func alldelet(sender: AnyObject) {
-        let sql = "delete * from user"
+        let sql = "delete from user"
         let result = db.execute(sql)
         print(result)
     }

@@ -28,15 +28,31 @@ class findwhat: UIViewController {
     @IBAction func findname(sender: AnyObject) {
         find()
     }
+   
     
     
     func find(){
         a.text=""
         let x=text.text!
-        let data = db.query("select from user where uname='\(x)'")
+        let data = db.query("select * from user where uname='\(x)'")
         //print("sql:\(sql)")
         for(var i=0;i<data.count;i++) {
          let tuser = data[i]
+            a.text! += "姓名：" + String(tuser["uname"]!) + "手机：" + String(tuser["mobile"]!)  + "\n"
+        }
+        
+    }
+    
+    @IBAction func findphone(sender: AnyObject) {
+        findphone()
+    }
+    func findphone(){
+        a.text=""
+        let x=text.text!
+        let data = db.query("select * from user where mobile='\(x)'")
+        //print("sql:\(sql)")
+        for(var i=0;i<data.count;i++) {
+            let tuser = data[i]
             a.text! += "姓名：" + String(tuser["uname"]!) + "手机：" + String(tuser["mobile"]!)  + "\n"
         }
         
