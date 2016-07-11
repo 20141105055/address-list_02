@@ -37,7 +37,14 @@ class find: UIViewController {
         let sql = "delete from user"
         let result = db.execute(sql)
         print(result)
+        showAlert()
     }
+    func showAlert() {
+        var alert = UIAlertView(title: "提示",message: "清空联系人成功！",delegate: self,cancelButtonTitle: "确定")
+        alert.alertViewStyle = UIAlertViewStyle.Default
+        alert.show()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func saveClicked(sender: AnyObject) {
         saveUser()
+        showAlert()
     }
     func initUser(){
         let data = db.query("select * from user")
@@ -40,6 +41,11 @@ class ViewController: UIViewController {
         let sql = "insert into user(uname,mobile) values('\(uname)','\(mobile)')"
         let result = db.execute(sql)
         print(result)
+    }
+    func showAlert() {
+    var alert = UIAlertView(title: "提示",message: "添加联系人成功！",delegate: self,cancelButtonTitle: "确定")
+        alert.alertViewStyle = UIAlertViewStyle.Default
+        alert.show()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

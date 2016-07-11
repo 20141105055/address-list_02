@@ -24,10 +24,12 @@ class Delet: UIViewController {
     
     @IBAction func delet(sender: AnyObject) {
         delt()
+        showAlert()
     }
     
     @IBAction func deletbyphone(sender: AnyObject) {
         deletbyphone()
+        showAlert()
     }
     func delt(){
         let x=todelet.text!
@@ -42,6 +44,11 @@ class Delet: UIViewController {
         print("sql:\(sql)")
         let result = db.execute(sql)
         print(result)
+    }
+    func showAlert() {
+        var alert = UIAlertView(title: "提示",message: "删除联系人成功！",delegate: self,cancelButtonTitle: "确定")
+        alert.alertViewStyle = UIAlertViewStyle.Default
+        alert.show()
     }
         override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
